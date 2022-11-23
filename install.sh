@@ -16,7 +16,6 @@ sysctl -p
 sysctl net.ipv4.tcp_available_congestion_control
 
 cd
-ARCHITECTURE=$(dpkg --print-architecture)
 wget -c https://dl.nssurge.com/snell/snell-server-v4.0.0-linux-amd64.zip	# download binary
 unzip -o snell-server-v4.0.0-linux-amd64.zip
 
