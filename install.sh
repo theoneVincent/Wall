@@ -27,4 +27,4 @@ systemctl enable snell			# start service
 
 echo
 echo "Copy the following line to surge"			# print profile
-echo "$(curl -s ipinfo.io/city) = snell, $(curl -s ipinfo.io/ip), 18567, HSB8CcpqBCCXMT6tRyeb6Ly59EJUwrCiEg, version=4"
+echo "$(curl -s ipinfo.io/city) = snell, $(curl -s ipinfo.io/ip), $(cat snell-server.conf | grep -i listen | cut --delimiter=':' -f2), $(cat snell-server.conf |grep psk | sed 's/ //g'), version=4"
